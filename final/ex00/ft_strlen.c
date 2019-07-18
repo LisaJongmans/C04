@@ -6,20 +6,25 @@
 /*   By: ljongman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/16 19:38:32 by ljongman          #+#    #+#             */
-/*   Updated: 2019/07/18 16:08:15 by ljongman         ###   ########.fr       */
+/*   Updated: 2019/07/18 22:06:13 by ljongman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <stdio.h>
 
-int		ft_strlen(char *str)
+#include <unistd.h>
+
+int	ft_strlen(char *str)
 {
 	int i;
+	int c;
 
 	i = 0;
+	c = 1;
 	while (str[i] != '\0')
+	{
+		c++;
 		i++;
-	i++;
-	return (i);
+	}
+	return (c);
 }
