@@ -6,7 +6,7 @@
 /*   By: ljongman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/18 02:03:30 by ljongman          #+#    #+#             */
-/*   Updated: 2019/07/18 15:41:10 by ljongman         ###   ########.fr       */
+/*   Updated: 2019/07/18 15:47:59 by ljongman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int		ft_countbase(char *base)
 			i = nbase;
 			while (base[i] != '\0')
 			{
-				if (rep == base[i])
+				if (rep != base[i])
 					i++;
 				else
 					return (0);
