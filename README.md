@@ -1,20 +1,57 @@
 # C04
 
-outnbr so far:
+putnbr base so far:
 
-#include <stdio.h>
+#include <unistd.h>
 
-void  ft_putnbr(int nb)
+void    ft_putchar(char c)
 {
-  
-  i = i % 10;
-  ft_putchar(i);
+  write(1, &c, 1);
 }
 
-int main() 
+void    ft_putnbr_base(int nbr, char *base)
 {
-  int nb;
-  
-  ft_putnbr(3);
-  return (0);
+    unsigned int    n;
+    char rep;
+    int nbase;
+
+    nbase = 0;
+    rep = '-';
+    while (base[nbase] != '\0')
+    {
+      if (((base[nbase] != '+') && (base[nbase] != '-') 
+      && (base[nbase] != 127) && (rep != base[nbase]))
+      && ((base[nbase] < 0) || (base[nbase] > 32)))
+      {
+        rep = base[nbase];
+        nbase++;
+      }
+      else
+        return (0);
+    }
+    if (nbase <= 1)
+      return (0);
+    if (nbr < 0)
+    {
+      ft_putchar('-');
+      n = nbr * -1;
+    }
+    else
+      n = nbr;
+    if (n > nbase - 1)
+    {
+      ft_putnbr_base((n / nbase), base);
+      ft_putchar((base[n % nbase]));
+    }
+    else
+      ft_putchar((base[n % nbase]));
+}
+
+int        main(void)
+{
+    int        nbr;
+    char    *base = "012";
+
+    nbr = -6339;
+    ft_putnbr_base(nbr, base);
 }
