@@ -119,3 +119,7 @@ int        main(void)
     nbr = -6339;
     ft_putnbr_base(nbr, base);
 }
+
+FINAL hopefully
+
+
