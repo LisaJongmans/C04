@@ -6,7 +6,7 @@
 /*   By: ljongman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/17 10:56:43 by ljongman          #+#    #+#             */
-/*   Updated: 2019/07/18 22:16:15 by ljongman         ###   ########.fr       */
+/*   Updated: 2019/07/19 08:19:13 by ljongman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,4 @@ void	ft_putnbr(int nb)
 	if (n > 9)
 		ft_putnbr(n / 10);
 	ft_putchar((n % 10) + '0');
-}
-
-int		main(void)
-{
-	ft_putnbr(-387);
-	return (0);
 }

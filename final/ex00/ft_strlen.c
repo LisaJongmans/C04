@@ -5,26 +5,21 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ljongman <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/16 19:38:32 by ljongman          #+#    #+#             */
-/*   Updated: 2019/07/18 22:06:13 by ljongman         ###   ########.fr       */
+/*   Created: 2019/07/19 08:17:37 by ljongman          #+#    #+#             */
+/*   Updated: 2019/07/19 08:20:14 by ljongman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-#include <unistd.h>
-
-int	ft_strlen(char *str)
+int		ft_strlen(char *str)
 {
 	int i;
-	int c;
 
 	i = 0;
-	c = 1;
 	while (str[i] != '\0')
 	{
-		c++;
 		i++;
 	}
-	return (c);
+	return (i);
 }
