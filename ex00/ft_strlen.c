@@ -18,12 +18,8 @@ int		ft_strlen(char *str)
 
 	i = 0;
 	while (str[i] != '\0')
-<<<<<<< HEAD
 	{
 		i++;
 	}
-=======
-		i++;
->>>>>>> abcf55da9db4b1e0d0a1f502bee3118c506427b6
 	return (i);
 }
